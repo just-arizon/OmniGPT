@@ -1,26 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OmniGpt</title>
-    <link rel="stylesheet" href="./css/style.min.css">
-     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-</head>
-<body>
-       <div id="mydiv"></div>
-
-    <script type="text/babel">
-      function Hello() {
-        return <h1>Hello World!</h1>;
-      }
-
-      const container = document.getElementById('mydiv');
-      const root = ReactDOM.createRoot(container);
-      root.render(<Hello />)
-    </script>
-</body>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Showcase -->
+    <header class="showcase">
+      <nav>
+        <div class="container">
+          <div class="logo">
+            <a href="#"><img src="./images/Group 13340.png" alt="logo" /></a>
+          </div>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Sign In</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- hero section -->
+      <section class="hero">
+        <div class="container container-wrap">
+          <div class="hero-message">
+            <h1>Seamless Communication <br>with OmniGPT</h1>
+            <div class="hero-message_subheading">
+              <h4>Powered by Chat GPT-4</h4>
+              <p class="text">
+                Experience the power of AI language models with OmniGPT.  Our
+                chat platform provides seamless communication across multiple
+                channels.
+              </p>
+            </div>
+            <p>Try for free! 15-day trial, no credit card required.</p>
+            <div class="btn"><a href=""><button>Start your free trial</button></a></div>
+          </div>
+          <div class="hero-graphics">
+             <div class="graphics-one">
+                <div class="graphics_sub-one">
+                  <img src="./images/Group 13353.png" alt="">
+                </div>
+                <div class="graphics_sub-circle">
+                  <img src="./images/Group 13354.png" alt="">
+                </div>
+             </div>
+             <div class="graphics-two">
+                <div class="graphics_sub-circle">
+                  <img src="./images/Group 13357.png" alt="">
+                </div>
+                <div class="graphics_sub-one">
+                  <img src="./images/Group 13355.png" alt="">
+                </div>
+             </div>
+             <div class="graphics-three">
+                <div class="graphics_sub-one">
+                  <img src="./images/Group 13358.png" alt="">
+                </div>
+             </div>
+          </div>
+        </div>
+      </section>
+    </header>
+  </body>
 </html>
