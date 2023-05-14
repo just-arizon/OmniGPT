@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Condensed:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&family=Roboto+Condensed:wght@700&display=swap");
 $light-color: #111826;
 $txt-color: #f4f4f4;
 $btn-color: #1fc77e;
@@ -8,7 +8,7 @@ $font-secondary: "Roboto Condensed", sans-serif;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-//   border: 1px solid lightgreen;
+  //   border: 1px solid lightgreen;
 }
 body {
   background-color: $light-color;
@@ -45,20 +45,59 @@ header.showcase {
       }
     }
   }
-   .harmburger-container{
-        display: none;
-        a {
-        color: $txt-color;
-        font-size: 2rem;
-      }
+  .harmburger-container {
+    display: none;
+    a {
+      color: $txt-color;
+      font-size: 2rem;
+    }
+  }
+
+    ul.sub-menu {
+      display: flex;
+      justify-content: center;
+    }
+  }
+    .nav-menu{
+    // display: ;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0);
+    // background-color: #979fb0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: none;
+     -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  transform: translateX(100%);
+    ul#sub-menu{
+        display: flex;
+        flex-direction: column;
+        li{
+            padding: 1rem 0;
+            a{
+            text-align: center;
+            }
+        }
+ li:hover,li:focus {
+  background-color: $light-color;
+}
+    }
+
     }
   section.hero {
     margin-top: 2.6em;
     .container .hero-message {
       // display: grid;
-    .container-wrap{
+      .container-wrap {
         flex-grow: 0;
-    }
+      }
       h1 {
         font-size: 4vw;
         margin-bottom: 1.5rem;
@@ -114,20 +153,20 @@ header.showcase {
       }
       div.graphics-two {
         display: flex;
-        .graphics_sub-one{
-            width: 343px;
+        .graphics_sub-one {
+          width: 343px;
           position: relative;
 
-            img{
-                position: relative;
+          img {
+            position: relative;
             top: -3.8rem;
-                width: 100%;
-            }
+            width: 100%;
+          }
         }
         div.graphics_sub-circle {
           display: flex;
           align-items: flex-end;
-           img {
+          img {
             position: relative;
             top: -4.3rem;
             width: 100%;
@@ -136,20 +175,20 @@ header.showcase {
       }
       div.graphics-three {
         display: flex;
-         .graphics_sub-one{
-            width: 343px;
+        .graphics_sub-one {
+          width: 343px;
           position: relative;
 
-            img{
-                position: relative;
+          img {
+            position: relative;
             top: -3.8rem;
-                width: 100%;
-            }
+            width: 100%;
+          }
         }
         div.graphics_sub-circle {
           display: flex;
           align-items: flex-end;
-           img {
+          img {
             position: relative;
             top: -4.3rem;
             width: 100%;
@@ -158,4 +197,80 @@ header.showcase {
       }
     }
   }
+.nav-menu.active {
+  display: block;
+  visibility: visible;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: all 1s ease-in;
+  -moz-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+}
+
+// Mobile-Responsiveness
+@media (max-width: 480px) {
+  header.showcase {
+    div.container {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.7rem 1.5rem;
+      ul {
+        display: none;
+      }
+      .harmburger-container {
+        display: block;
+      }
+    }
+    section.hero {
+        .container{
+        display: flex;
+        flex-direction: column;
+         div.hero-graphics{
+         div.graphics_sub-one {
+          width: 343px;
+          height: auto;
+          position: relative;
+          img {
+            position: relative;
+            top: 2rem;
+            width: 100%;
+          }
+        }  
+        div.graphics_sub-circle {
+          img {
+            position: relative;
+            top: 2rem;
+          }
+        }
+         div.graphics-two{
+            display: none;
+        }
+      }
+       
+      .hero-message {
+        h1 {
+          font-size: 1.9rem;
+          font-weight: 700;
+          text-align: center;
+        }
+        div.hero-message_subheading {
+            h4{
+            text-align: center;
+            }
+          p.text {
+            text-align: center;
+            padding-right: 2rem;
+            margin-bottom: 1rem;
+          }         
+        }
+         div.btn{
+            display: flex;
+            justify-content: center;
+          }
+      }
+     
+    }
+  }
+}
 }
