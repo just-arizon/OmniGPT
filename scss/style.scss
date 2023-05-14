@@ -26,6 +26,8 @@ header.showcase {
   div.logo {
     width: 108px;
     height: auto;
+    display: flex;
+    align-items: center;
     img {
       width: 100%;
     }
@@ -35,12 +37,21 @@ header.showcase {
     gap: 3em;
     li {
       list-style: none;
+      display: flex;
+      align-items: center;
       a {
         text-decoration: none;
         color: $txt-color;
       }
     }
   }
+   .harmburger-container{
+        display: none;
+        a {
+        color: $txt-color;
+        font-size: 2rem;
+      }
+    }
   section.hero {
     margin-top: 2.6em;
     .container .hero-message {
