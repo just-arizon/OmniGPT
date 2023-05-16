@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&family=Roboto+Condensed:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;700&family=Roboto+Condensed:wght@700&display=swap");
 $light-color: #111826;
 $txt-color: #f4f4f4;
 $btn-color: #1fc77e;
@@ -8,7 +8,7 @@ $font-secondary: "Roboto Condensed", sans-serif;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  //   border: 1px solid lightgreen;
+    // border: 1px solid lightgreen;
 }
 body {
   background-color: $light-color;
@@ -79,13 +79,22 @@ header.showcase {
     ul#sub-menu{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
         li{
-            padding: 1rem 0;
+            display: flex;
+            justify-content: center;
+            padding: .7rem 0;
             a{
-            text-align: center;
+              font-weight: 700;
             }
+        
         }
- li:hover,li:focus {
+            li:nth-child(1) { 
+              justify-content: flex-end;
+              padding-right: 1rem;
+            }
+ li:focus {
   background-color: $light-color;
 }
     }
@@ -214,7 +223,7 @@ header.showcase {
     div.container {
       display: flex;
       justify-content: space-between;
-      padding: 0.7rem 1.5rem;
+      padding: 0.7rem .6rem;
       ul {
         display: none;
       }
@@ -259,8 +268,9 @@ header.showcase {
             text-align: center;
             }
           p.text {
+            font-weight: 200;
             text-align: center;
-            padding-right: 2rem;
+            padding-right: .5rem;
             margin-bottom: 1rem;
           }         
         }
